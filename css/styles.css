@@ -231,7 +231,7 @@ video{
     text-align: center;
 }
 
-cards-grid {
+.cards-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5em;
@@ -254,6 +254,26 @@ cards-grid {
 
 .info-card p {
     line-height: 1.6;
+}
+
+.card-icon {
+    width: 70px;
+    height: 70px;
+    background-color: #e8eef8;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1em;
+}
+
+.card-icon img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    box-shadow: none;
+    border-radius: 0;
+    margin: 0;
 }
 
 
