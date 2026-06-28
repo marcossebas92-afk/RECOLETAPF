@@ -1,0 +1,352 @@
+/* Base CSS */
+
+:root{
+    --Blue:#163A70;
+
+    --Red:#A71E22;
+
+    --Gray:#dcddde;
+
+    --gold:#C98C2B;
+
+    --black:#1E1E1E;
+
+    --light:#FFFFFF;
+
+    --white:#f8f8f8;
+}
+
+/* reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* general */
+
+body {
+    background-color: var(--Gray);
+    color: var(--black);
+    font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+    line-height: 1.5; 
+    font-size: 1em;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Fonts */
+
+h1,
+h2 {
+    font-family:"Lora", Georgia, "Times New Roman", serif;
+}
+
+h3, 
+h4, 
+nav a, 
+.btn-secondary { 
+    font-family: "Noto Serif", Georgia, "Times New Roman", serif; 
+}
+
+/* Header */
+
+.header {
+    background-color: var(--Blue);
+    color: var(--light);
+    padding: 1em 0;
+    box-shadow: 0 4px 12 px rgba(0, 0, 0, 0.18);
+}
+
+.header .container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.logo img{
+    width: 4em;
+    height: auto;
+}
+
+.logo-text h2,
+.logo-text h3 {
+    color:var(--light);
+}
+
+.logo-text h3{
+    font-size: 1.2em;
+}
+
+.logo-text h2{
+    font-size: 0.95em;
+    font-weight: 400;
+}
+
+/* Navigation Bar */
+.nav-menu {
+    display: none;
+}
+
+.nav-menu.active {
+    display: block;
+}
+
+.nav-menu ul{
+    list-style-type: none;
+}
+
+.nav-menu li{
+    margin: 1em 0;
+}
+
+.nav-menu a{
+    color:var(--light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: var(--gold);
+}
+
+/* hamburguer menu */
+
+.hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 0.5em;
+    width: 40px;
+}
+
+.bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    margin: 5px;
+    background-color: var(--light);
+    border-radius: 5px;
+}
+
+/* main */
+
+main {
+    padding: 2em 0;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main section {
+    background-color: var(--light);
+    margin-bottom: 2em;
+    padding: 2.4em;
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08)
+}
+
+main h1,
+main h2 {
+    color: var(--Blue);
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+main h1{
+    font-size: 2.2em;
+}
+
+main h2{
+    font-size: 1.7em;
+}
+
+main p{
+    margin-bottom: 1em;
+    font-size: 1.05em;
+}
+
+/* Images */
+
+.hero img,
+.about-hero img,
+.team-hero img,
+.tournaments-hero img,
+.community-hero img,
+.contact-hero img {
+    width: 85%;
+    max-width: 760px;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 22px;
+    margin: 1.5em auto;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+.hero p,
+.about-hero p,
+.team-hero p,
+.tournaments-hero p,
+.community-hero p,
+.contact-hero p {
+    max-width: 850px;
+    margin: 1em auto;
+    text-align: center;
+}
+
+/* Videos */
+
+video{
+    width: 100%;
+    max-width: 620px;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 16px;
+    margin: 1.4em auto;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+/* cards */
+
+.cards-section {
+    text-align: center;
+}
+
+cards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+    margin-top: 2em;
+}
+
+.info-card {
+    background-color: var(--white);
+    padding: 1.5em;
+    border-radius: 14px;
+    text-align: center;
+    border-top:5px solid var(--Red);
+}
+
+.info-card h3{
+    color: var(--Blue);
+    margin-bottom: 0.8em;
+    font-size: 1.3em;
+}
+
+.info-card p {
+    line-height: 1.6;
+}
+
+
+/* Buttons */
+
+.btn-secondary, input[type="submit"]{
+        background-color: var(--Red);
+    color: var(--light);
+    padding: 0.9em 1.7em;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 1em;
+    transition: 0.3s ease;
+}
+
+.btn-secondary:hover, input[type="submit"]:hover {
+    background-color: var(--gold);
+    color: var(--black);
+}
+
+/* Vision */
+
+.vision {
+    background-color: var(--Red);
+    color: var(--light);
+    text-align: center;
+    padding: 3em 1em;
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+.vision h1,
+.vision h3 {
+    color: var(--light);
+}
+
+.vision .container{
+    max-width: 900px;
+}
+
+
+/* footer */
+
+footer {
+    background-color: var(--Blue);
+    color: var(--light);
+    padding: 3em 1em;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2em;
+    text-align: center;
+}
+
+footer h4 {
+    color: var(--gold);
+    margin-bottom: 0.5em;
+    font-size: 1.1em;
+}
+
+footer p {
+    line-height: 1.6;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 0.8em;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    transition: 0.3s ease;
+    }
+
+.social-icons img:hover {
+    transform: scale(1.12);
+}
+
+.copyright{
+    text-align: center;
+    margin-top: 2em;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    padding-top: 1em;
+}
+
+/* Team Page */
