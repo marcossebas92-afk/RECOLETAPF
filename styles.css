@@ -350,3 +350,251 @@ footer p {
 }
 
 /* Team Page */
+.team-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2em;
+    margin-top: 2em;
+}
+
+.player-card {
+    background-color: var(--light);
+    padding: 1.5em;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.10);
+    border: 1px solid rgba(22, 58, 112, 0.12);
+    transition: 0.3s ease;
+}
+
+.player-card:hover {
+    transform: translateY(-6px);
+}
+
+.player-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: 1.2em;
+}
+
+.player-card h3 {
+    color: var(--Blue);
+    font-size: 1.2em;
+    margin-bottom: 0.4em;
+}
+
+.player-card h4 {
+    color: var(--Red);
+    font-size: 1em;
+    margin-bottom: 0.8em;
+}
+
+.player-card p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* Table */
+
+.table-container {
+    margin-top: 2em;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--light);
+}
+
+caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--Blue);
+    margin-bottom: 1em;
+}
+
+th,
+td {
+    border: 2px solid var(--Blue);
+    padding: 1em;
+    text-align: center;
+}
+
+th {
+    background-color: var(--Blue);
+    color: var(--light);
+}
+
+tr:nth-child(even) {
+    background-color: var(--white);
+}
+
+/* Accordion */
+
+.value-card {
+    margin-bottom: 1em;
+}
+
+.value-header {
+    width: 100%;
+    background-color: var(--Blue);
+    color: var(--light);
+    padding: 1em;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: left;
+    transition: 0.3s ease;
+}
+
+.value-header:hover {
+    background-color: var(--Red);
+}
+
+.value-content {
+    display: none;
+    background-color: var(--white);
+    padding: 1.2em;
+    border-radius: 0 0 10px 10px;
+}
+
+.value-content.active {
+    display: block;
+}
+
+/* Form */
+
+form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+fieldset {
+    border: 2px solid var(--Blue);
+    border-radius: 14px;
+    padding: 1.5em;
+    margin-bottom: 1.5em;
+    background-color: var(--white);
+}
+
+legend {
+    color: var(--Blue);
+    font-weight: bold;
+    padding: 0 0.5em;
+}
+
+label {
+    display: block;
+    margin-top: 1em;
+    font-weight: bold;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 0.8em;
+    margin-top: 0.3em;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border: 2px solid var(--Blue);
+}
+
+input[type="submit"] {
+    width: auto;
+}
+
+/* Tablet */
+
+@media screen and (min-width: 768px) {
+    .cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop */
+
+@media screen and (min-width: 1024px) {
+    .header .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .nav-menu {
+        display: block;
+    }
+
+    .nav-menu ul {
+        display: flex;
+        gap: 2em;
+    }
+
+    .nav-menu li {
+        margin: 0;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Mobile */
+
+@media screen and (max-width: 600px) {
+    main {
+        width: 94%;
+    }
+
+    main section {
+        padding: 1.5em;
+    }
+
+    .hero img,
+    .about-hero img,
+    .team-hero img,
+    .tournaments-hero img,
+    .community-hero img,
+    .contact-hero img {
+        width: 100%;
+        height: 280px;
+    }
+
+    .schedule caption {
+        font-size: 1.3em;
+    }
+
+    .schedule th,
+    .schedule td {
+        padding: 0.9em;
+        font-size: 0.95em;
+    }
+}
