@@ -15,7 +15,6 @@ links.forEach(function(link) {
 
         });
     });
-}
 
 /* about page */
 
